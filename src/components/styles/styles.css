@@ -220,12 +220,7 @@ section:focus {
         transform: translateY(0px) rotate(14deg);
     }
 }
-.coverage-wrap {
-    -webkit-mask-image: url("https://cdn.prod.website-files.com/66797c2909f9ec0b1ff1a767/667a968d565f94f79f5d8429_us-map.png");
-    mask-image: url("https://cdn.prod.website-files.com/66797c2909f9ec0b1ff1a767/667a968d565f94f79f5d8429_us-map.png");
-    -webkit-mask-size: cover;
-    mask-size: cover;
-}
+ 
 
 .visible .country-tag-wrap {
     transform: none;

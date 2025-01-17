@@ -63,7 +63,7 @@ function Manifesto() {
     };
   }, []); // Empty dependency array to run once when component mounts
   return (
-    <html data-wf-domain=" " data-wf-page=" " data-wf-site=" " lang="en">
+      <>
       <head>
         <meta charset="utf-8" />
         <title>K4M2A</title>
@@ -77,7 +77,7 @@ function Manifesto() {
         <link rel="stylesheet" href="css/custom.css" />
         <link rel="stylesheet" href="css/styles.css" />
       </head>
-      <body>
+      <>
         <div className="page-wrapper">
           <Navigation />
           <main className="main cc-home">
@@ -402,8 +402,9 @@ function Manifesto() {
           integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
           crossOrigin="anonymous"
         />
-      </body>
-    </html>
+      </>
+      </>
+    
   );
 }
 

@@ -1,27 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link ,useLocation} from 'react-router-dom';
 import logo from '/Home/logo.png';
 
 const Navigation = () => {
+  const location = useLocation(); // Get the current location
+  const isResearchPage = location.pathname === '/research'; // Check if the current route is /research
+
+  console.log({location, pathname:location.pathname === '/manifesto' })
+
   return (
-    <nav className="nav">
+    <nav className={`nav ${isResearchPage ? 'nav-black' : ''}`}>
       <div className="page-padding">
         <div className="container">
           <div className="nav-inner">
             <div className="nav-left">
-              <Link aria-label="k4m2a logo" to="/" aria-current="page" className="nav-logo w-inline-block w--current">
+              <Link aria-label="k4m2a logo" to="/" className="nav-logo w-inline-block w--current">
                 <div className="svg-embed cc-logo-word w-embed">
                   <img alt="logo" src="/Home/logo.png" />
                 </div>
               </Link>
               <div className="nav-menu">
-                <Link to="/" aria-current="page" className="nav-link w--current">
+                <Link
+                  to="/"
+                  className={`nav-link ${location.pathname === '/' ? 'w--current' : ''}`}
+                >
                   Home
                 </Link>
-                <Link to="/manifesto" className="nav-link">
+                <Link
+                  to="/manifesto"
+                  className={`nav-link ${location.pathname === '/manifesto' ? 'w--current' : ''}`}
+                >
                   Manifesto
                 </Link>
-                <Link to="/research" className="nav-link">
+                <Link
+                  to="/research"
+                  className={`nav-link ${isResearchPage ? 'w--current' : ''}`}
+                >
                   Research
                 </Link>
                 <Link to="/careers" target="_blank" className="nav-link">
